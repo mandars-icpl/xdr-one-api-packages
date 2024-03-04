@@ -1,0 +1,13 @@
+set -e
+export NAME=xdr-api
+export INSTALL_DIR=/usr/bin/xdr-api
+
+chown -R "xdr-api":"xdr-api" $INSTALL_DIR
+
+case $1 in
+
+configure)
+	chmod +x /usr/bin/xdr-api/Xdr.One.Api
+	;;
+esac
+exit 0

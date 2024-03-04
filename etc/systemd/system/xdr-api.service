@@ -1,0 +1,20 @@
+[Unit]
+Description=XDR-API is backend server for invinsense-xdr
+
+[Service]
+# Add environment variables
+Environment="ASPNETCORE_ENVIRONMENT=Development"
+Environment="XDR_HOST=172.17.14.86"
+Environment="XDR_API_URL=https://172.17.14.86:55000"
+Environment="XDR_API_USER=wazuh-wui"
+Environment="XDR_API_PASSWORD=MyS3cr37P450r.*-"
+Environment="XDR_ONE_API_URL=https://172.17.14.86:5001"
+Environment="XDR_REGISTRATION_PASSWORD=ssiXgQwGvymSgRa"
+Environment="X_API_TOKEN=LG3Z59Y2ECBNMDSP687QXU"
+# Other service configurations...
+WorkingDirectory=/usr/bin/xdr-api/
+ExecStart=/usr/bin/xdr-api/Xdr.One.Api
+Restart=always
+[Install]
+WantedBy=multi-user.target
+
